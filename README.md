@@ -45,6 +45,13 @@ aws configure
 ```
 To configure aws, refer to https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
+## Structure of the project
+This project is divided into the three notebook files. <br>
+:notebook: 1.data_cleaning.ipynb <br>
+:notebook: 2.data_analysis.ipynb <br>
+:notebook: 3.model_building_and_evaluation.ipynb <br>
+
+The notebook should be referred in this order.
 
 ## Conclusions
 The problem addressed in this project was that we wanted to personalise sending the different kinds of offers to the customers because not all the offers should be sent to all the customers randomly. Hence, we turned this problem into a supervised learning task where we trained a classifier given the features related to the customer’s profile, offer’s portfolio and customer’s transaction data, predict whether an offer will be converted/successful or not. To do this, we first implemented a baseline of logistic regression because that is the first and foremost algorithm which comes to the mind if the target data is binary (categorical) in nature. Logistic regression gives the probability of a sample belonging to both the classes. We found that the model performance was good with an average performance of 85% taking all the four metrics together. However, we then tried two advanced algorithms. First we implemented Linear-SVC and found the performance of the model to be around 87% taking all the metrics together. Then we implemented XGBoost to have a performance jump to 90% taking all the metrics together. This is also because XGBoost is quite an efficient algorithm and known to outclass all other classifiers. It is capable of performing the three main forms of gradient boosting (Gradient Boosting (GB), Stochastic GB and Regularized GB) and it is robust enough to support fine tuning and addition of regularization parameters. System-wise, the library’s portability and flexibility allow the use of a wide variety of computing environments like parallelization for tree construction across several CPU cores; distributed computing for large models and Cache Optimization to improve hardware usage and efficiency. With all these advantages, we still face a miss-classification error of around 8%.
