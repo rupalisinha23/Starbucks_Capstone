@@ -1,0 +1,11 @@
+pandas
+numpy
+math
+json
+matplotlib
+seaborn
+os
+sklearn
+xgboost
+sagemaker
+boto3
